@@ -1,0 +1,197 @@
+<div id="main-container">
+
+	<div id="breadcrumb">
+		<ul class="breadcrumb">
+			 <li><i class="fa fa-home"></i><a href="index.php"> Home</a></li>
+			 <li class="active">Survey</li>	 
+		</ul>
+	</div><!-- /breadcrumb-->
+
+<div class="main-header clearfix">
+		<div class="page-title">
+			<h3 class="no-margin">Survey</h3>
+			<span>Please complete the survey below</span>
+		</div><!-- /page-title -->
+		
+		<ul class="page-stats">
+	    	<li>
+	    		<div class="value">
+	    			<span>Surveys</span>
+	    			<h4 id="currentVisitor">2</h4>
+	    		</div>
+				<span id="visits" class="sparkline"></span>
+	    	</li>
+	    	<li>
+	    		<div class="value">
+	    			<span>Potential Savings</span>
+	    			<h4>£ TBD</h4>
+	    		</div>
+	    		<span id="balances" class="sparkline"></span>
+	    	</li>
+	    </ul><!-- /page-stats -->
+	</div><!-- /main-header -->
+
+<div class="grey-container shortcut-wrapper">
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-bar-chart-o"></i>
+		</span>
+		<span class="text">Statistic</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-envelope-o"></i>
+			<span class="shortcut-alert">
+							3
+						</span>	
+		</span>
+		<span class="text">Messages</span>
+	
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-user"></i>
+		</span>
+		<span class="text">New Users</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-globe"></i>
+
+		</span>
+		<span class="text">Notification</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-list"></i>
+		</span>
+		<span class="text">Activity</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-cog"></i></span>
+		<span class="text">Setting</span>
+	</a>
+</div>
+
+<div class="container">
+    <!-- The PAGE !!! -->
+    <div class="padding-md">
+        <div class="row">
+            <div class="col-sm-8 content-padding">
+                <h2>Stationery CATEGORY PROFILE</h2>
+                <p>The typical range of savings for companies that are able to enter
+                    into new arrangements is between 15% and 60%. This is based on the
+                    company's current position. Please complete survey below to discover your likely savings range.</p>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Stationery</div>
+                    <div class="panel-body">
+                        <form action="/result" method="POST">
+                            <div class="form-group col-md-10">
+                                <label for="totalspend">Total Spend (£)</label>
+                                <p class="" id="totalspendalert"></p>
+                                <input type="number" class="form-control" name="totalspend" id="totalspend"
+                                    placeholder="Total Spend e.g. 1000" required>
+                            </div><!-- /form-group -->
+
+                            <div class="form-group col-md-10">
+                                <label for="currently_under_contract">Currently under contract</label>
+                                <p class="small">Do you have a contract for all Stationery supplies?</p>
+                                <select name="currently_under_contract" id="currently_under_contract">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="exclusive_contract_position">Contract position</label>
+                                <p class="small">If you are under contract then is the contract exclusive?</p>
+                                <select name="exclusive_contract_position" id="exclusive_contract_position">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slidera">Do you often engae with potential Stationery suppliers?</label>
+                                <p class="small"></p>
+                                <input type="range" name="slidera" id="slidera" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Never</span>
+                                <span class="pull-right">All the time</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="sliderb">Do you think your company's Stationery supply requirements would be
+                                    attractive in the market?</label>
+                                <p class="small">Consider both small and large suppliers</p>
+                                <input type="range" name="sliderb" id="sliderb" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Not attractive</span>
+                                <span class="pull-right">Very attractive</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="sliderc">Supplier Relationships?</label>
+                                <p class="small">Do you have a good relationship with existing suppliers?</p>
+                                <input type="range" name="sliderc" id="sliderc" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Poor</span>
+                                <span class="pull-right">Excellent</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider1">Number of Suppliers</label>
+                                <p class="small">How many suppliers do you currently use?</p>
+                                <input type="range" name="slider1" id="slider1" value="0" min="1" max="100"
+                                    data-theme="a" />
+                                <span class="">1</span>
+                                <span class="pull-right">>10+</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider2">Competitiveness of the market place</label>
+                                <p class="small">How competitve do you reckon the marketplace for your type of
+                                    Stationery requirements to be?</p>
+                                <input type="range" name="slider2" id="slider2" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Not very</span>
+                                <span class="pull-right">Very competitive</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider3">Ease of changing supplier(s)</label>
+                                <p class="small">How easy would it be do you reckon to change Stationery suppliers?</p>
+                                <input type="range" name="slider3" id="slider3" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Difficult</span>
+                                <span class="pull-right">Easy</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider4">Cost Management</label>
+                                <p class="small">How tightly are costs controlled in this area?</p>
+                                <input type="range" name="slider4" id="slider4" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Not at all </span>
+                                <span class="pull-right">Very Tightly</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider5">Age of contract(s)</label>
+                                <p class="small">How long ago did you engage current suppliers?</p>
+                                <input type="range" name="slider5" id="slider5" value="0" min="1" max="100"
+                                    data-theme="a" />
+                                <span class="">1 month</span>
+                                <span class="pull-right">3 Years+</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <label for="slider6">Specificty of requirements</label>
+                                <p class="small">How generic or proprietory are your statinoary requirements</p>
+                                <input type="range" name="slider6" id="slider6" value="0" min="0" max="100"
+                                    data-theme="a" />
+                                <span class="">Generic</span>
+                                <span class="pull-right">Specific</span>
+                            </div><!-- /form-group -->
+                            <div class="form-group col-md-10">
+                                <input type="submit" class="btn btn-success btn-sm pull-right" value="Submit">
+                            </div>
+                        </form>
+                    </div><!-- /panel -->
+                </div><!-- /.panel head -->
+            </div><!-- /.panel -->
+        </div> <!-- /col -->
+    </div><!-- /row -->
+</div><!-- /.padding-md -->
+</div><!-- /main-container -->

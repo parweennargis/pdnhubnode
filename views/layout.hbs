@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PDNHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- Font Awesome -->
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Pace -->
+  <link href="/assets/css/pace.css" rel="stylesheet">
+  <!-- Endless -->
+  <link href="/assets/css/endless.css" rel="stylesheet">
+  <link href="/assets/css/endless-skin.css" rel="stylesheet">
+  <link href="/assets/css/pdnhub.css" rel="stylesheet">
+</head>
+
+<body class="overflow-hidden">
+  <div id="wrapper" class="preload">
+    <div id="top-nav" class="skin-6 fixed">
+      <div class="brand">
+        <span>PDNHub</span>
+        <span class="text-toggle"> <small>v1.0</small></span>
+      </div><!-- /brand -->
+      <button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav-notification clearfix">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-envelope fa-lg"></i>
+            <span class="notification-label bounceIn animation-delay4">1</span>
+          </a>
+          <ul class="dropdown-menu message dropdown-1">
+            <li><a>You have 1 new message</a></li>
+            <li>
+              <a class="clearfix" href="#">
+                <img src="/assets/img/pdnhub/headshot2.png" alt="User Avatar">
+                <div class="detail">
+                  <strong>Jeremy Spalding</strong>
+                  <p class="no-margin">
+                    Blah blah submarine
+                  </p>
+                  <small class="text-muted"><i class="fa fa-check text-success"></i> 12m ago</small>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">Messages </a></li>
+          </ul>
+        </li>
+        <li class="dropdown hidden-xs">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-tasks fa-lg"></i>
+            <span class="notification-label bounceIn animation-delay5">1</span>
+          </a>
+          <ul class="dropdown-menu task dropdown-2">
+            <li><a href="#">You have 1 task </a></li>
+            <li>
+              <a href="#">
+                <div class="clearfix">
+                  <span class="pull-left">Stationery</span>
+                  <small class="pull-right text-muted">60%</small>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width:78%"></div>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">Tasks </a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell fa-lg"></i>
+            <span class="notification-label bounceIn animation-delay6">2</span>
+          </a>
+          <ul class="dropdown-menu notification dropdown-3">
+            <li><a href="#">You have 2 new notifications</a></li>
+            <li>
+              <a href="#">
+                <span class="notification-icon bg-warning">
+                  <i class="fa fa-warning"></i>
+                </span>
+                <span class="m-left-xs">Stationery assigned to you</span>
+                <span class="time text-muted">Just now</span>
+              </a>
+            </li>
+
+            <li><a href="#">Notifications </a></li>
+          </ul>
+        </li>
+        <li class="profile dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <strong>Jeremy Spalding</strong>
+            <span><i class="fa fa-chevron-down"></i></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="clearfix" href="#">
+                <img src="/assets/img/pdnhub/headshot2.png" alt="User Avatar">
+                <div class="detail">
+                  <strong>Jeremy Spalding</strong>
+                  <p class="grey">info@pdnhub.com</p>
+                </div>
+              </a>
+            </li>
+            <li><a tabindex="-1" href="tbd.php" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit
+                profile</a></li>
+            <li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a>
+            </li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i
+                  class="fa fa-lock fa-lg"></i> Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <aside class="fixed skin-6">
+      <div class="sidebar-inner scrollable-sidebar">
+        <div class="size-toggle">
+          <a class="btn btn-sm" id="sizeToggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="btn btn-sm pull-right logoutConfirm_open" href="#logoutConfirm">
+            <i class="fa fa-power-off"></i>
+          </a>
+        </div><!-- /size-toggle -->
+        <div class="user-block clearfix">
+          <img src="/assets/img/pdnhub/headshot2.png" alt="User Avatar">
+          <div class="detail">
+            <strong>Jeremy Spalding</strong><span
+              class="badge badge-danger bounceIn animation-delay4 m-left-xs">3</span>
+            <ul class="list-inline">
+              <li><a href="tbd.php">Profile</a></li>
+              <li><a href="tbd.php" class="no-margin">Inbox</a></li>
+            </ul>
+          </div>
+        </div><!-- /user-block -->
+        <div class="search-block">
+          <div class="input-group">
+            <input type="text" class="form-control input-sm" placeholder="search here...">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /search-block -->
+        <div class="main-menu">
+          <ul>
+            <li class=''>
+              <a href="/">
+                <span class="menu-icon">
+                  <i class="fa fa-desktop fa-lg"></i>
+                </span>
+                <span class="text">
+                  Dashboard
+                </span>
+                <span class="menu-hover"></span>
+              </a>
+            </li>
+
+            <li class=''>
+              <a href="/survey">
+                <span class="menu-icon">
+                  <i class="fa fa-file-text fa-lg"></i>
+                </span>
+                <span class="text">
+                  Surveys
+                </span>
+                <span class="menu-hover"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    {{{body}}}
+
+    <script src="/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Modernizr -->
+    <script src='/assets/js/modernizr.min.js'></script>
+    <!-- Pace -->
+    <script src='/assets/js/pace.min.js'></script>
+    <!-- Popup Overlay -->
+    <script src='/assets/js/jquery.popupoverlay.min.js'></script>
+    <!-- Slimscroll -->
+    <script src='/assets/js/jquery.slimscroll.min.js'></script>
+    <!-- Cookie -->
+    <script src='/assets/js/jquery.cookie.min.js'></script>
+    <!-- Endless -->
+    <script src="/assets/js/endless/endless.js"></script>
+    <script src="/assets/js/custom.js"></script>
+</body>
+
+</html>

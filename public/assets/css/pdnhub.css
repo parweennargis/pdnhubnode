@@ -1,0 +1,85 @@
+
+table.google-visualization-orgchart-table {
+    border-collapse: separate !important;
+}
+
+
+
+.form-group{
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding-right: 20px;
+    margin: 22px 0px 18px 0px;
+  }
+  .form-group input {
+    width: 70%;
+    margin: 0px;
+  }
+  .form-group progress {
+    width: 70%;
+    margin: 0px;
+  }
+
+  
+
+
+.form-group .form-group-overlay{
+  margin: -8px 0px 0px 0px;
+}
+
+
+/*to allow watermark on graphs*/
+
+.chartWithOverlay {
+    position: relative;
+    width: 500px;
+}
+.overlay-top-left {
+    width: 80px;
+    height: 28px;
+    position: absolute;
+    top: 160px;  /* chartArea top  */
+    left: 140px; /* chartArea left */
+    color: #CCCCCC;
+    font-family:'Arial'; 
+    font-size: 20px;
+}
+
+.overlay-top-right {
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top: 160px;  /* chartArea top  */
+    left: 290px; /* chartArea left */
+    color: #CCCCCC;
+    font-family:'Arial'; 
+    font-size: 20px;
+}
+
+.overlay-bottom-left {
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top: 315px;  /* chartArea top  */
+    left: 130px; /* chartArea left */
+    color: #CCCCCC;
+    font-family:'Arial'; 
+    font-size: 20px;
+}
+
+.overlay-bottom-right {
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top: 315px;  /* chartArea top  */
+    left: 290px; /* chartArea left */
+    color: #CCCCCC;
+    font-family:'Arial'; 
+    font-size: 20px;
+}
+
+

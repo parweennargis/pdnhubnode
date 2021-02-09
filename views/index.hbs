@@ -1,0 +1,128 @@
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["orgchart"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+
+        data.addRows([
+            ['Total Spend', ''],
+            ['Legal', 'Total Spend'],
+            ['IT', 'Total Spend'],
+            ['Utilities', 'Total Spend'],
+            ['Food and Drink', 'Total Spend'],
+            ['Corporate Services', 'Total Spend'],
+            ['Indirect Expenditure', 'Utilities'],
+            ['Travel and Subsistence', 'Corporate Services'],
+            ['Office Services', 'Indirect Expenditure'],
+            ['Facilities Mgt', 'Indirect Expenditure'],
+            [{
+                v: '<strong><a href="/survey">Stationery</a></strong>',
+                f: '<a href="/survey">Stationery</a><div style="color:red; font-style:italic">Demo</div>'
+            }, 'Office Services'],
+            ['Comsumables', 'Office Services']
+        ]);
+
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, { allowHtml: true });
+    }
+</script>
+
+
+<div id="main-container">
+    <div id="breadcrumb">
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/"> Home</a></li>
+            <li class="active">
+                Dashboard
+            </li>
+        </ul>
+    </div><!-- /breadcrumb-->
+
+    <div class="main-header clearfix">
+        <div class="page-title">
+            <h3 class="no-margin">
+                Dashboard
+            </h3>
+            <span>
+                Welcome back Jeremy Spalding
+            </span>
+        </div><!-- /page-title -->
+
+        <ul class="page-stats">
+            <li>
+                <div class="value">
+                    <span>Surveys</span>
+                    <h4 id="currentVisitor">2</h4>
+                </div>
+                <span id="visits" class="sparkline"></span>
+            </li>
+            <li>
+                <div class="value">
+                    <span>Potential Savings</span>
+                    <h4>£ TBD</h4>
+                </div>
+                <span id="balances" class="sparkline"></span>
+            </li>
+        </ul><!-- /page-stats -->
+    </div><!-- /main-header -->
+
+    <div class="grey-container shortcut-wrapper">
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-bar-chart-o"></i>
+		</span>
+		<span class="text">Statistic</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-envelope-o"></i>
+			<span class="shortcut-alert">
+							3
+						</span>	
+		</span>
+		<span class="text">Messages</span>
+	
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-user"></i>
+		</span>
+		<span class="text">New Users</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-globe"></i>
+
+		</span>
+		<span class="text">Notification</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-list"></i>
+		</span>
+		<span class="text">Activity</span>
+	</a>
+	<a href="#" class="shortcut-link">
+		<span class="shortcut-icon">
+			<i class="fa fa-cog"></i></span>
+		<span class="text">Setting</span>
+	</a>
+</div>
+
+    <div class="container">
+        <!-- The PAGE !!! -->
+        <div class="padding-md">
+            <div class="row">
+                <p>This is the PDNHub Savings Hub demo. This demonstrates the Kraljic matrix for
+                    <strong>Stationery</strong>.
+                </P>
+                <p>Please click on the <strong>Stationery</strong> category of spend to start demo.</p>
+            </div>
+            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        </div>
+    </div><!-- /.padding-md -->
+</div><!-- /main-container -->
+</div>
+<a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>

@@ -1,0 +1,115 @@
+<script type="text/javascript">
+
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable
+            ([['X', 'You', 'Bob', 'Fred', 'Max', 'Ruby', 'Steve'],
+            [{{competitiveness}}, {{easeofchange}}, null, null, null, null, null],
+            [75, null, 67, null, null, null, null],
+            [74, null, null, 60, null, null, null],
+            [60, null, null, null, 80, null, null],
+            [79, null, null, null, null, 85, null],
+            [70, null, null, null, null, null, 86]
+            ]);
+
+        var options = {
+            legend: 'none',
+            title: 'Competitiveness vs Ease Of Change',
+            pointSize: 10,
+            pointShape: 'square',
+            hAxis: { title: 'Competitiveness', minValue: 0, maxValue: 100 },
+            vAxis: { title: 'Ease of Change', minValue: 0, maxValue: 100, direction: -1 },
+            series: {
+                0: { pointShape: 'circle', pointSize: 20 },
+                annotations: {
+                    textStyle: {
+                        fontName: 'Times-Roman',
+                        fontSize: 18,
+                        bold: true,
+                        italic: true,
+                        color: '#871b47',     // The color of the text.
+                        auraColor: '#d799ae', // The color of the text outline.
+                        opacity: 0.8          // The transparency of the text.
+                    }
+                }
+            }
+        };
+        var chart = new google.visualization.ScatterChart(document.getElementById('result_chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+<div id="main-container">
+    <div id="breadcrumb">
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="index.php"> Home</a></li>
+            <li class="active">
+                Result
+            </li>
+        </ul>
+    </div><!-- /breadcrumb-->
+    <div class="main-header clearfix">
+        <div class="page-title">
+			<h3 class="no-margin">Result</h3>
+			<span>Results below relate to Stationery Survey</span>
+		</div><!-- /page-title -->
+        <ul class="page-stats">
+            <li>
+                <div class="value">
+                    <span>Surveys</span>
+                    <h4 id="currentVisitor">3</h4>
+                </div>
+                <span id="visits" class="sparkline"></span>
+            </li>
+            <li>
+                <div class="value">
+                    <span>Potential Savings</span>
+                    <h4>£ <strong>
+                            {{finalCalculation}}
+                        </strong></h4> <!-- was id="currentBalance"-->
+                </div>
+                <span id="balances" class="sparkline"></span>
+            </li>
+        </ul><!-- /page-stats -->
+    </div><!-- /main-header -->
+    <div class="container">
+        <!-- The PAGE !!! -->
+        <div class="padding-md">
+            <div class="row padding-md panel panel-default">
+                <div class="col-md-6">
+                    <!-- The Graph -->
+                    <div class="chartWithOverlay">
+                        <div id="result_chart_div" style="width: 500px; height: 500px;">
+                        </div>
+                        <div class="overlay-top-left">
+                            <div>Critical</div>
+                        </div>
+                        <div class="overlay-top-right">
+                            <div>Strategic</div>
+                        </div>
+                        <div class="overlay-bottom-right">
+                            <div>Leverage</div>
+                        </div>
+                        <div class="overlay-bottom-left">
+                            <div>Acquisition</div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-4">
+                    <div class="panel-body padding-lg">
+                        <div class='row alert alert-warning'>
+                            <p>Graph 1 - Category Specialist Feedback</p>
+                        </div>
+                        <div class='row col-sm-12'>
+                            <p>
+                                {{message}}
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-5 -->
+            </div><!-- row -->
+        </div><!-- /.col-md-5 -->
+    </div><!-- /.row -->
+</div>
+</div>
